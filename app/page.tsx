@@ -14,9 +14,9 @@ import LoadingScreen from '@/components/LoadingScreen';
 import { fadeIn, fadeInUp, staggerChildren } from '@/lib/motion';
 
 const stats = [
-  { label: 'Projects Completed', value: '0' },
+  { label: 'Projects Completed', value: '1' },
   { label: 'Technologies Learned', value: '6+' },
-  { label: 'Experience Level', value: '1+' },
+  { label: 'Experience Level', value: 'fresh' },
 ];
 
 const skills = [
@@ -32,34 +32,33 @@ const skills = [
 
 const projects = [
   {
-    title: 'Galaxy Analytics',
-    description: 'A premium dashboard built for modern marketing teams.',
-    tech: 'Next.js • Tailwind • Framer Motion',
+    title: 'Calculator App',
+    description:
+      'Modern calculator built with TypeScript and Tailwind CSS with responsive UI and smooth interactions.',
+    tech: 'TypeScript • Tailwind',
+    image: '/calc_project.jpg',
+    github: 'https://github.com/nasr4231/calculator',
+    demo: '#',
   },
+
+  {
+    title: 'Galaxy Analytics',
+    description:
+      'A premium dashboard built for modern marketing teams.',
+    tech: 'Next.js • Tailwind • Framer Motion',
+    image: '/project2.png',
+    github: '#',
+    demo: '#',
+  },
+
   {
     title: 'Crypto Ledger',
-    description: 'A vibrant portfolio tracker for digital assets and insights.',
+    description:
+      'A vibrant portfolio tracker for digital assets and insights.',
     tech: 'React • TypeScript • Chart.js',
-  },
-  {
-    title: 'Studio Landing',
-    description: 'A landing page experience with smooth animation and interaction.',
-    tech: 'Next.js • CSS Animations • SEO',
-  },
-  {
-    title: 'TaskFlow App',
-    description: 'Workflow automation interface for productivity teams.',
-    tech: 'React • Tailwind • Firebase',
-  },
-  {
-    title: 'Portfolio CMS',
-    description: 'A polished portfolio system with rich project presentation.',
-    tech: 'Next.js • Markdown • Vercel',
-  },
-  {
-    title: 'Support Center',
-    description: 'A knowledge base and ticket experience with clean branding.',
-    tech: 'TypeScript • React • Accessibility',
+    image: '/project3.png',
+    github: '#',
+    demo: '#',
   },
 ];
 
@@ -95,15 +94,7 @@ export default function Home() {
                 Download CV
               </a>
             </motion.div>
-            <motion.div variants={fadeInUp} className="flex items-center gap-4 text-xl text-slate-300">
-              {socials.map((social) => (
-                <a key={social.label} href={social.href} className="rounded-full border border-white/10 bg-white/5 px-4 py-3 transition hover:border-violet-300/40 hover:text-violet-300" aria-label={social.label}>
-                  {social.emoji}
-                </a>
-              ))}
-            </motion.div>
           </motion.div>
-
           <motion.div
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
@@ -114,7 +105,7 @@ export default function Home() {
             <div className="absolute -right-10 top-24 h-14 w-14 rounded-full bg-cyan-300/10 blur-2xl" />
             <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-slate-950/90 p-4">
               <Image
-                src="/profile-placeholder.svg"
+                src='/profile_pic.jpg'
                 alt="Profile placeholder"
                 width={520}
                 height={520}
@@ -143,7 +134,7 @@ export default function Home() {
               My development style is detail-oriented, with a focus on performance, accessibility, and motion. I enjoy collaborating with teams, shipping polished UI, and maintaining organized project structure across every build.
             </p>
           </motion.div>
-          <div className="grid gap-5 sm:grid-cols-3">
+          <div className="grid gap-5">
             {stats.map((item) => (
               <StatsCard key={item.label} value={item.value} label={item.label} />
             ))}
@@ -164,7 +155,13 @@ export default function Home() {
         <SectionHeading title="Featured Projects" subtitle="Recent work" />
         <div className="grid gap-6 xl:grid-cols-3">
           {projects.map((project) => (
-            <ProjectCard key={project.title} title={project.title} description={project.description} tech={project.tech} />
+            <ProjectCard key={project.title}
+              title={project.title}
+              description={project.description}
+              tech={project.tech}
+              image={project.image}
+              github={project.github}
+              demo={project.demo} />
           ))}
         </div>
       </section>
