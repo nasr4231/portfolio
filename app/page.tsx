@@ -38,7 +38,7 @@ const projects = [
     tech: 'TypeScript • Tailwind',
     image: '/calc_project.jpg',
     github: 'https://github.com/nasr4231/calculator',
-    demo: '#',
+    demo: 'https://calculator-three-azure-88.vercel.app/',
   },
 
   {
