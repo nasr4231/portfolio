@@ -32,13 +32,13 @@ const skills = [
 
 const projects = [
   {
-    title: 'Calculator App',
+    title: 'mini-projects',
     description:
-      'Modern calculator built with TypeScript and Tailwind CSS with responsive UI and smooth interactions.',
-    tech: 'TypeScript • Tailwind',
-    image: '/calc_project.jpg',
-    github: 'https://github.com/nasr4231/calculator',
-    demo: 'https://calculator-three-azure-88.vercel.app/',
+      'calculator and Todo-list built with HTML CSS Java script & responsive UI and smooth interactions.',
+    tech: 'html • css • js',
+    image: '/mini-projects.png',
+    github: 'https://github.com/nasr4231/mini_projects',
+    demo: 'https://mini-projects-774.vercel.app/',
   },
 
   {
